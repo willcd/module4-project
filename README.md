@@ -3,7 +3,7 @@
 
 * Student name: **Will Dougherty**
 * Student pace: **self paced**
-* Scheduled project review date/time: **16 May 2022, 3:00-3:45 PM**
+* Scheduled project review date/time: **17 May 2022, 2:00-2:45 PM**
 
 ## Description
 
@@ -13,21 +13,26 @@ The overarching task is:
 
 * Build a model that provides top 5 movie recommendations to a user, based on their ratings of other movies.
 
-With this as the core objective, I will also create a framework for building user profiles (getting their movie ratings) that can then be used in the model to generate recommendations for the user.
+With this as the core objective, I will expand on this to create a framework for providing recommendations to existing users, as well as new users.
 
 ## Business Problem
 
-FlixWeb is a relative newcomer to the online movie-streaming space. After already being in service and providing movies to stream to thousands of users, and collecting ratings, they want to improve their recommmendation service, to re-position themselves as the go-to service for excellent, user-specific recommendations.
+FlixWeb is a relative newcomer to the online movie-streaming space. Their current platform provides films to users, who rate them, and then those ratings help users find quality films to watch.
 
-As the lead data scientist for FlixWeb, I am tasked with building a rating-prediction model using their already-large dataset of user ratings, which= can provide quality recommendations to existing users. In addition, we need a way to recommend films to new users, and onboard them onto the service, leading to their user profile becoming 'mature' and able to be incorporated into the full model.
+However they've received lots of feedback requesting more personalized recommendations, since users often spend a lot of time looking for something to watch, and would like to have more tailored recommendations based on the ratings they've given to films.
 
-### Goals:
+* Better recommendations means more user engagement, and they'll be more likely to choose our service to give them interesting suggestions for what to watch.
+* Users often want to watch 'something', maybe even with a general parameter in mind ('horror movie', 'classic film') but spend a long time in our app looking around before deciding on what to watch.
 
-1) Since movie ratings are the raw material of the dataset, the model will do its best to predict users' ratings. However, the more important measure is how a user would rank a collection of films, as every user is rating films on their own subjective, un-scientific scale. Thus, I will target the highest NDCG (Normalized Discounted Cumulative Gain) across all users in order to maximize the quality of recommendations, as any list of recommended films is itself a predicted ranking.
+As the lead data scientist for FlixWeb, I am tasked with building a recommendation system for existing users. In addition, we need a way to recommend films to new users, and onboard them onto the service, leading to their user profile becoming 'mature' and able to be incorporated into the full model.
 
-2) Use these predictions to implement a framework for making recommendations on two levels: a basic, 'best' recommendation list using all films; and a variety of ways to subset this, depending on what a user wants to see (genre, decade, etc).
+## Goals:
 
-3) Create a plan for providing services for new users with no ratings, and onboarding them as their user profile matures.
+1) Since movie ratings are the raw material of the dataset, the model will predict users' ratings. However, the more important measure is how a user would rank a collection of films, as every user is rating films on their own subjective, un-scientific scale. Thus, I will target the highest NDCG (Normalized Discounted Cumulative Gain) across all users in order to maximize the quality of recommendations, as any list of recommended films is itself a predicted ranking.
+
+2) Use these predictions to implement a framework for making recommendations. This will include basic 'Top 5' recommendations, as well as top films in a given genre or decade, and also films that are 'hidden gems' (few rankings).
+
+3) Create a plan for providing recommendations for new users with few or no ratings, and onboard them until their user profile matures.
 
 ## Dataset and Methodology
 
